@@ -1,0 +1,1153 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "Stiebel.heatpump",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "ISG WEB Interface"
+  },
+  "description": {
+    "en": "Manage your heatpump"
+  },
+  "category": [
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/small.png",
+    "large": "/assets/large.png",
+    "xlarge": "/assets/xlarge.png"
+  },
+  "author": {
+    "name": "Henk van Barneveld",
+    "email": "h.vanbarne@gmail.com"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "capability_changed",
+        "title": {
+          "en": "If a meassured value has changed",
+          "nl": "Als waarde is gewijzigd"
+        },
+        "titleFormatted": {
+          "en": "If a value has changed",
+          "nl": "Als een waarde is gewijzigd"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "is_target_temperature",
+        "title": {
+          "en": "Target temperature !{{is|isn't}}",
+          "nl": "Doeltemperatuur !{{is|is niet}}"
+        },
+        "titleFormatted": {
+          "en": "Target temperature !{{is|isniet}} [[target_temperature]]",
+          "nl": "Doeltemperatuur !{{is|is niet}} [[target_temperature]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "target_temperature",
+            "placeholder": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_measure_temperature",
+        "title": {
+          "en": "Measured temperature !{{is|isn't}}",
+          "nl": "Gemeten temperatuur !{{is|is niet}}"
+        },
+        "titleFormatted": {
+          "en": "Measured temperature !{{is|isn't}} [[measure_temperature]]",
+          "nl": "Gemeten temperatuur !{{is|is niet}} [[measure_temperature]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_temperature",
+            "placeholder": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_Outside_temp",
+        "title": {
+          "en": "Outside temp !{{is|isn't}}",
+          "nl": "Buiten temperatuur !{{is|is niet}}"
+        },
+        "titleFormatted": {
+          "en": "Outside temp !{{is|isn't}} [[measure_temperature.inputregister.1]]",
+          "nl": "Buiten temperatuur !{{is|is niet}} [[measure_temperature.inputregister.1]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_temperature.inputregister.1",
+            "placeholder": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_Actual_room_temperature",
+        "title": {
+          "en": "Actual room temperature !{{is|isn't}}",
+          "nl": "Kamer temperatuur !{{is|is niet}}"
+        },
+        "titleFormatted": {
+          "en": "Actual room temperature !{{is|isn't}} [[measure_temperature.inputregister.2]]",
+          "nl": "Kamer temperatuur !{{is|is niet}} [[measure_temperature.inputregister.2]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_temperature.inputregister.2",
+            "placeholder": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_Hot_water_temperature",
+        "title": {
+          "en": "Hot water temperature !{{is|isn't}}",
+          "nl": "Heet water temperatuur !{{is|is niet}}"
+        },
+        "titleFormatted": {
+          "en": "Hot water temperature !{{is|isn't}} [[measure_temperature.inputregister.3]]",
+          "nl": "Heet water temperatuur !{{is|is niet}} [[measure_temperature.inputregister.3]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_temperature.inputregister.3",
+            "placeholder": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_Actual_Flow_temp",
+        "title": {
+          "en": "Actual Flow temp !{{is|isn't}}",
+          "nl": "WP Aanvoer temperatuur !{{is|is niet}}"
+        },
+        "titleFormatted": {
+          "en": "Actual Flow temp !{{is|isn't}} [[measure_temperature.inputregister.4]]",
+          "nl": "WP Aanvoer temperatuur !{{is|is niet}} [[measure_temperature.inputregister.4]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_temperature.inputregister.4",
+            "placeholder": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_Actual_retun_temp",
+        "title": {
+          "en": "Actual retun temp !{{is|isn't}}",
+          "nl": "WP retour temp !{{is|is niet}}"
+        },
+        "titleFormatted": {
+          "en": "Actual retun temp !{{is|isn't}} [[measure_temperature.inputregister.5]]",
+          "nl": "WP retour temp !{{is|is niet}} [[measure_temperature.inputregister.5]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_temperature.inputregister.5",
+            "placeholder": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_requested_water_temp",
+        "title": {
+          "en": "Requested water temp !{{is|isn't}}",
+          "nl": "Gevraagde water temp !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Requested water temp !{{is|isn't}} [[measure_temperature.inputregister.6]]",
+          "nl": "Gevraagde water temp !{{is|is niet}} [[measure_temperature.inputregister.6]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_temperature.inputregister.6",
+            "placeholder": {
+              "en": "Temperature",
+              "nl": "Temperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_Dew_point",
+        "title": {
+          "en": "Dew point !{{is|isn't}",
+          "nl": "Dauwpunt !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Dew point !{{is|isn't} [[measure_temperature.inputregister.7]]",
+          "nl": "Dauwpunt !{{is|is niet} [[measure_temperature.inputregister.7]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_temperature.inputregister.7",
+            "placeholder": {
+              "en": "Dew point",
+              "nl": "Dauwpunt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_pump_state",
+        "title": {
+          "en": "Pump state !{{is|isn't}",
+          "nl": "Pomptoestand !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Pump state !{{is|isn't} [[pump_state.inputregister.8]]",
+          "nl": "Pomptoestand !{{is|is niet} [[pump_state.inputregister.8]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "checkbox",
+            "name": "pump_state.inputregister.8",
+            "title": {
+              "en": "Pump state",
+              "nl": "Pomptoestand"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_bron_pump",
+        "title": {
+          "en": "Source pump !{{is|isn't}",
+          "nl": "Bron pomp !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Source pump !{{is|isn't} [[pump_state.inputregister.14]]",
+          "nl": "Bron pomp !{{is|is niet} [[pump_state.inputregister.14]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "checkbox",
+            "name": "pump_state.inputregister.14",
+            "title": {
+              "en": "Source pump",
+              "nl": "Bron pomp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_measure_pressure",
+        "title": {
+          "en": "Measured low pressure !{{is|isn't}",
+          "nl": "Gemeten lage druk !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Measured low pressure !{{is|isn't} [[measure_pressure.inputregister.9]]",
+          "nl": "Gemeten lage druk !{{is|is niet} [[measure_pressure.inputregister.9]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_pressure.inputregister.9",
+            "placeholder": {
+              "en": "Pressure",
+              "nl": "Druk"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_measure_pressureII",
+        "title": {
+          "en": "Measured high pressure !{{is|isn't}",
+          "nl": "Gemeten hoge druk !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Measured high pressure !{{is|isn't} [[measure_pressure.inputregister.10]]",
+          "nl": "Gemeten hoge druk !{{is|is niet} [[measure_pressure.inputregister.10]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "measure_pressure.inputregister.10",
+            "placeholder": {
+              "en": "Pressure",
+              "nl": "Druk"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_powerconsumption_heating_water",
+        "title": {
+          "en": "Powerconsumption heating water !{{is|isn't}",
+          "nl": "Energiegebruik warm water !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Powerconsumption heating water !{{is|isn't} [[meter_power.inputregister.11]]",
+          "nl": "Energiegebruik warm water !{{is|is niet} [[meter_power.inputregister.11]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "meter_power.inputregister.11",
+            "placeholder": {
+              "en": "Power",
+              "nl": "Vermogen"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_powerconsumption_heating",
+        "title": {
+          "en": "Powerconsumption heating !{{is|isn't}",
+          "nl": "Energiegebruik verwarmen !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Powerconsumption heating !{{is|isn't} [[meter_power.inputregister.12]]",
+          "nl": "Energiegebruik verwarmen !{{is|is niet} [[meter_power.inputregister.12]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "meter_power.inputregister.12",
+            "placeholder": {
+              "en": "Power",
+              "nl": "Vermogen"
+            }
+          }
+        ]
+      },
+      {
+        "id": "is_Powerconsumption_today",
+        "title": {
+          "en": "Powerconsumption today !{{is|isn't}",
+          "nl": "Totaal Energiegebruik !{{is|is niet}"
+        },
+        "titleFormatted": {
+          "en": "Powerconsumption today !{{is|isn't} [[meter_power.dailyuse]]",
+          "nl": "Totaal Energiegebruik !{{is|is niet} [[meter_power.dailyuse]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "meter_power.dailyuse",
+            "placeholder": {
+              "en": "Power",
+              "nl": "Vermogen"
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "adjust_heat_water_temperature",
+        "title": {
+          "en": "Adjust heat water temperature",
+          "nl": "Pas de watertemperatuur aan"
+        },
+        "titleFormatted": {
+          "en": "Adjust heat water temperature [[Wished_temperature]]",
+          "nl": "Pas de watertemperatuur aan [[Wished_temperature]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "Wished_temperature",
+            "placeholder": {
+              "en": "Desired temperature",
+              "nl": "Gewenste temperatuur"
+            },
+            "min": 10,
+            "max": 60,
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "adjust_heating_temperature",
+        "title": {
+          "en": "Adjust heating temperature",
+          "nl": "Pas de verwarmings temperatuur aan"
+        },
+        "titleFormatted": {
+          "en": "Adjust heating temperature [[Wished_temperature]]",
+          "nl": "Pas de verwarmings temperatuur aan [[Wished_temperature]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "number",
+            "name": "Wished_temperature",
+            "placeholder": {
+              "en": "Desired temperature",
+              "nl": "Gewenste temperatuur"
+            },
+            "min": 10,
+            "max": 30,
+            "step": 0.5
+          }
+        ]
+      },
+      {
+        "id": "set_operation_mode",
+        "title": {
+          "en": "Set Operation Mode",
+          "nl": "Stel de werkingsmodus in"
+        },
+        "titleFormatted": {
+          "en": "Set Operation Mode [[operation_mode]]",
+          "nl": "Stel de werkingsmodus in [[operation_mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=stiebel-heatpump"
+          },
+          {
+            "type": "dropdown",
+            "name": "operation_mode",
+            "title": {
+              "en": "Operation Mode",
+              "nl": "Werkingsmodus"
+            },
+            "values": [
+              {
+                "id": "1",
+                "title": {
+                  "en": "Standby",
+                  "nl": "Standbywerking"
+                }
+              },
+              {
+                "id": "2",
+                "title": {
+                  "en": "Programmode",
+                  "nl": "Programmawerking"
+                }
+              },
+              {
+                "id": "3",
+                "title": {
+                  "en": "Comfortmode",
+                  "nl": "Comfortwerking"
+                }
+              },
+              {
+                "id": "4",
+                "title": {
+                  "en": "Economic",
+                  "nl": "ECO modus"
+                }
+              },
+              {
+                "id": "5",
+                "title": {
+                  "en": "Heating water",
+                  "nl": "Warmwaterbedrijf"
+                }
+              },
+              {
+                "id": "0",
+                "title": {
+                  "en": "Emergency",
+                  "nl": "Noodbedrijf"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Stiebel Eltron Heatpump"
+      },
+      "class": "other",
+      "connectivity": [
+        "lan"
+      ],
+      "capabilities": [
+        "Operation_mode",
+        "target_temperature",
+        "measure_temperature",
+        "measure_temperature.inputregister.1",
+        "measure_temperature.inputregister.2",
+        "measure_temperature.inputregister.3",
+        "measure_temperature.inputregister.4",
+        "measure_temperature.inputregister.5",
+        "measure_temperature.inputregister.6",
+        "measure_temperature.inputregister.7",
+        "pump_state.inputregister.8",
+        "pump_stateII.inputregister.8",
+        "pump_state.inputregister.14",
+        "pump_stateII.inputregister.14",
+        "measure_pressure.inputregister.9",
+        "measure_pressure.inputregister.10",
+        "meter_power.inputregister.11",
+        "meter_power.inputregister.12",
+        "meter_power",
+        "measure_power.inputregister.15",
+        "measure_power.inputregister.16",
+        "measure_power"
+      ],
+      "capabilitiesOptions": {
+        "measure_temperature.inputregister.1": {
+          "title": {
+            "en": "Outside temp",
+            "nl": "Buiten temperatuur"
+          },
+          "address": 506,
+          "scale": 10
+        },
+        "measure_temperature.inputregister.2": {
+          "title": {
+            "en": "Actual room temperature",
+            "nl": "Kamer temperatuur"
+          },
+          "address": 583,
+          "scale": 10
+        },
+        "measure_temperature.inputregister.3": {
+          "title": {
+            "en": "Hot water temperature",
+            "nl": "Heet water temperatuur"
+          },
+          "address": 521,
+          "scale": 10
+        },
+        "measure_temperature.inputregister.4": {
+          "title": {
+            "en": "Actual Flow temp",
+            "nl": "WP Aanvoer temperatuur"
+          },
+          "address": 512,
+          "scale": 10
+        },
+        "measure_temperature.inputregister.5": {
+          "title": {
+            "en": "Actual retun temp",
+            "nl": "WP retour temp"
+          },
+          "address": 541,
+          "scale": 10
+        },
+        "measure_temperature.inputregister.6": {
+          "title": {
+            "en": "requested water temp",
+            "nl": "gevraagde water temp"
+          },
+          "address": 522,
+          "scale": 10
+        },
+        "measure_temperature.inputregister.7": {
+          "title": {
+            "en": "Dew point",
+            "nl": "Dauwpunt"
+          },
+          "address": 586,
+          "scale": 10
+        },
+        "pump_state.inputregister.8": {
+          "title": {
+            "en": "Circulation pump",
+            "nl": "Circulation pomp"
+          },
+          "address": 2511,
+          "scale": 1
+        },
+        "pump_stateII.inputregister.8": {
+          "title": {
+            "en": "Circulation pump",
+            "nl": "Circulation pomp"
+          },
+          "address": 2511,
+          "scale": 1
+        },
+        "measure_pressure.inputregister.9": {
+          "title": {
+            "en": "Low pressure",
+            "nl": "Lage druk"
+          },
+          "address": 544,
+          "scale": 100
+        },
+        "measure_pressure.inputregister.10": {
+          "title": {
+            "en": "High pressure",
+            "nl": "Hoge druk"
+          },
+          "address": 546,
+          "scale": 100
+        },
+        "meter_power.inputregister.11": {
+          "title": {
+            "en": "powerconsumption heating water",
+            "nl": "Energiegebruik warm water"
+          },
+          "address": 3514,
+          "scale": 1
+        },
+        "meter_power.inputregister.12": {
+          "title": {
+            "en": "powerconsumption heating",
+            "nl": "Energiegebruik verwarmen"
+          },
+          "address": 3511,
+          "scale": 1
+        },
+        "meter_power": {
+          "title": {
+            "en": "Total Powerconsumption",
+            "nl": "Totaal Energiegebruik"
+          },
+          "scale": 1
+        },
+        "measure_power.inputregister.15": {
+          "title": {
+            "en": "powerconsumption heating water today",
+            "nl": "Energiegebruik warm water vandaag"
+          },
+          "address": 3513,
+          "scale": 0.001
+        },
+        "measure_power.inputregister.16": {
+          "title": {
+            "en": "powerconsumption heating today",
+            "nl": "Energiegebruik verwarmen vandaag"
+          },
+          "address": 3510,
+          "scale": 0.001
+        },
+        "measure_power": {
+          "title": {
+            "en": "Powerconsumption today",
+            "nl": "Totaal Energiegebruik vandaag"
+          },
+          "scale": 1
+        },
+        "pump_state.inputregister.14": {
+          "title": {
+            "en": "source pump",
+            "nl": "bron pomp"
+          },
+          "address": 2514,
+          "scale": 1
+        },
+        "pump_stateII.inputregister.14": {
+          "title": {
+            "en": "source pump",
+            "nl": "bron pomp"
+          },
+          "address": 2514,
+          "scale": 1
+        }
+      },
+      "images": {
+        "small": "/drivers/stiebel-heatpump/assets/small.png",
+        "large": "/drivers/stiebel-heatpump/assets/large.png",
+        "xlarge": "/drivers/stiebel-heatpump/assets/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "device",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "prev": "device",
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "ui": {
+        "components": [
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "measure_temperature",
+              "target_temperature"
+            ],
+            "type": "thermostat",
+            "options": {
+              "temperature": {
+                "measure_temperature": "measure_temperature",
+                "target_temperature": "target_temperature"
+              }
+            }
+          }
+        ]
+      },
+      "id": "stiebel-heatpump"
+    }
+  ],
+  "capabilities": {
+    "measure_percentage": {
+      "type": "number",
+      "title": {
+        "en": "Measure Percentage"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "%"
+      },
+      "insights": true,
+      "chartType": "spline",
+      "icon": "/assets/pump.svg"
+    },
+    "measure_power": {
+      "type": "number",
+      "title": {
+        "en": "Power",
+        "nl": "Vermogen",
+        "de": "Leistung",
+        "fr": "Puissance",
+        "it": "Potenza",
+        "sv": "Effekt",
+        "no": "Effekt",
+        "es": "Potencia",
+        "da": "Effekt",
+        "ru": "Электроэнергия",
+        "pl": "Moc",
+        "ko": "전력"
+      },
+      "units": {
+        "en": "W",
+        "ru": "Вт",
+        "ko": "W"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Power in watt (W)",
+        "nl": "Vermogen in watt (W)",
+        "de": "Leistung in Watt (W)",
+        "fr": "Puissance  en watt (W)",
+        "it": "Potenza in watt (W)",
+        "sv": "Effekt i watt (W)",
+        "no": "Effekt i watt (W)",
+        "es": "Potencia en vatios (W)",
+        "da": "Effekt i watt (W)",
+        "ru": "Электроэнергия (Вт)",
+        "pl": "Moc w watach (W)",
+        "ko": "전력 와트(W)"
+      },
+      "options": {
+        "isApproximated": {
+          "type": "boolean",
+          "default": false,
+          "desc": {
+            "en": "This flag is used to determine that the device itself has no power measurement functionality, but that the driver calculates the energy use.",
+            "ru": "Этот флаг используется для определения того, что само устройство не имеет функции измерения электроэнергии, но драйвер рассчитывает потребление энергии.",
+            "pl": "Flaga oznacza, że samo urządzenie nie ma funkcji pomiaru mocy, ale sterownik oblicza zużycie energii.",
+            "ko": "이 플래그는 디바이스 자체에 전력 측정 기능이 없지만 드라이버가 에너지 사용량을 계산하는 경우에 사용됩니다.",
+            "no": "Dette flagget brukes til å anmerke at enheten i seg selv ikke har noen funksjon for effektmåling, men at sjåføren beregner energibruken.",
+            "es": "Este aviso indica que el dispositivo no dispone de ninguna funcionalidad para medir la energía, sino que el controlador calcula el uso de energía."
+          }
+        }
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_pressure": {
+      "type": "number",
+      "title": {
+        "en": "Pressure",
+        "nl": "Druk"
+      },
+      "units": {
+        "en": "bar",
+        "nl": "bar"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Pressure in  (bar)",
+        "nl": "Druk in  (bar)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_string": {
+      "type": "string",
+      "title": {
+        "en": "Measure String"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": ""
+      },
+      "insights": true,
+      "chartType": "spline"
+    },
+    "measure_temperature": {
+      "type": "number",
+      "title": {
+        "en": "measure_Temperature",
+        "nl": "Temperatuur"
+      },
+      "units": {
+        "en": "°C",
+        "ko": "°C",
+        "no": "°C",
+        "ru": "°C"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Temperature in degrees Celsius (°C)",
+        "nl": "Temperatuur in graden Celsius (°C)",
+        "de": "Temperatur in Grad Celsius (°C)"
+      },
+      "decimals": 1,
+      "chartType": "spline",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "meter_power": {
+      "type": "number",
+      "title": {
+        "en": "Energy",
+        "nl": "Energie",
+        "de": "Energie",
+        "fr": "Énergie",
+        "it": "Energia",
+        "sv": "Energi",
+        "no": "Energi",
+        "es": "Energía",
+        "da": "Energi",
+        "ru": "Электроэнергия",
+        "pl": "Energia",
+        "ko": "에너지"
+      },
+      "decimals": 2,
+      "units": {
+        "en": "kWh",
+        "ru": "кВтч",
+        "ko": "kWh",
+        "no": "kWh"
+      },
+      "desc": {
+        "en": "Energy usage in kilowatt-hour (kWh)",
+        "nl": "Energie verbruik in kilowattuur (kWh)",
+        "de": "Energieverbrauch in Kilowattstunde (kWh)",
+        "fr": "Consommation d'énergie en kilowatt-heure (kWh)",
+        "it": "Consumo energetico in kilowattora (kWh)",
+        "sv": "Energianvändning i kilowattimmar (kWh)",
+        "no": "Energiforbruk i kilowattimer (kWh)",
+        "es": "Uso de energía en kilovatio hora (kWh)",
+        "da": "Energiforbrug i kilowattime (kWh)",
+        "ru": "Энергопотребление в киловатт-часах (кВтч)",
+        "pl": "Zużycie energii w kilowatogodzinach (kWh)",
+        "ko": "에너지 사용량 킬로와트시(kWh)"
+      },
+      "chartType": "spline",
+      "options": {
+        "isApproximated": {
+          "type": "boolean",
+          "default": false,
+          "desc": {
+            "en": "This flag is used to determine that the device itself has no power measurement functionality, but that the driver calculates the energy use.",
+            "ru": "Этот флаг используется для определения того, что само устройство не имеет функции измерения электроэнергии, но драйвер рассчитывает потребление энергии.",
+            "pl": "Flaga oznacza, że samo urządzenie nie ma funkcji pomiaru mocy, ale sterownik oblicza zużycie energii.",
+            "ko": "이 플래그는 디바이스 자체에 전력 측정 기능이 없지만 드라이버가 에너지 사용량을 계산하는 경우에 사용됩니다.",
+            "no": "Dette flagget brukes til å anmerke at enheten i seg selv ikke har noen funksjon for effektmåling, men at sjåføren beregner energibruken.",
+            "es": "Este aviso indica que el dispositivo no dispone de ninguna funcionalidad para medir la energía, sino que el controlador calcula el uso de energía."
+          }
+        }
+      },
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "Operation_mode": {
+      "type": "enum",
+      "title": {
+        "en": "Operation_mode"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "values": [
+        {
+          "id": "1",
+          "title": {
+            "en": "Standby",
+            "nl": "Standbywerking"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Programmode",
+            "nl": "Programmawerking"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Comfortmode",
+            "nl": "Comfortwerking"
+          }
+        },
+        {
+          "id": "4",
+          "title": {
+            "en": "Economic",
+            "nl": "ECO modus"
+          }
+        },
+        {
+          "id": "5",
+          "title": {
+            "en": "Heating water",
+            "nl": "warmwaterbedrijf"
+          }
+        },
+        {
+          "id": "0",
+          "title": {
+            "en": "Emergency",
+            "nl": "Noodbedrijf"
+          }
+        }
+      ]
+    },
+    "pump_state": {
+      "type": "boolean",
+      "title": {
+        "en": "Pump_state",
+        "nl": "pomp inbedrijf"
+      },
+      "desc": {
+        "en": "True when pump active.",
+        "nl": "Wordt geactiveerd als pomp actief."
+      },
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Pump turned on",
+        "nl": "pomp geactiveerd"
+      },
+      "insightsTitleFalse": {
+        "en": "Pump turned off",
+        "nl": "Pomp gedeactiveerd"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "pump_stateII": {
+      "type": "number",
+      "title": {
+        "en": "Pump_stateII",
+        "nl": "pomp inbedrijf II"
+      },
+      "desc": {
+        "en": "Numeric value for pump state.",
+        "nl": "Numerieke waarde voor pompstatus."
+      },
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "circulation Pump turned on",
+        "nl": "Circulatie pomp geactiveerd"
+      },
+      "insightsTitleFalse": {
+        "en": "Pump turned off",
+        "nl": "Pomp gedeactiveerd"
+      },
+      "chartType": "stepLine",
+      "getable": true,
+      "setable": false,
+      "uiComponent": null
+    },
+    "target_temperature": {
+      "type": "number",
+      "min": 4,
+      "max": 32,
+      "title": {
+        "en": "Target temperature",
+        "nl": "Ingestelde temperatuur",
+        "de": "Ziel-Temperatur",
+        "fr": "Température cible",
+        "it": "Temperatura nominale",
+        "sv": "Måltemperatur",
+        "no": "Ønsket temperatur",
+        "es": "Temperatura deseada",
+        "da": "Måltemperatur",
+        "ru": "Целевая температура",
+        "pl": "Cel temperatury",
+        "ko": "목표 온도"
+      },
+      "units": {
+        "en": "°C",
+        "ru": "°C",
+        "ko": "°C",
+        "no": "°C"
+      },
+      "chartType": "stepLine",
+      "decimals": 1,
+      "insights": true,
+      "getable": true,
+      "setable": true,
+      "uiComponent": "thermostat"
+    }
+  }
+}

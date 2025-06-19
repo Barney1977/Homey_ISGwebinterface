@@ -1,0 +1,17 @@
+{
+    "pair": {
+        "modbus": {
+            "title": "Connect to Modbus device",
+            "device_settings": "Connection settings",
+            "ip": "IP address:",
+            "port": "Port:",
+            "id": "Modbus device ID",
+            "device_name": "ISG WEB Modbus"
+	}
+    },
+    "device": {
+        "modbus": {
+            "device_info": "Now you can manage your device"
+        }
+    }
+}

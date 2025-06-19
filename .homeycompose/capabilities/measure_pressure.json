@@ -1,0 +1,24 @@
+  {
+    "type": "number",
+    "title": {
+      "en": "Pressure",
+      "nl": "Druk"
+    
+    },
+    "units": {
+      "en": "bar",
+      "nl": "bar"
+      
+    },
+    "insights": true,
+    "desc": {
+      "en": "Pressure in  (bar)",
+      "nl": "Druk in  (bar)"
+    },
+    "chartType": "spline",
+    "decimals": 2,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+   
+  }

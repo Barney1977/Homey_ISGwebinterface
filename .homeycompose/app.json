@@ -1,0 +1,28 @@
+{
+  "id": "Stiebel.heatpump",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "ISG WEB Interface"
+  },
+  "description": {
+    "en": "Manage your heatpump"
+  },
+  "category": [
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/small.png",
+    "large": "/assets/large.png",
+    "xlarge": "/assets/xlarge.png"
+  },
+  "author": {
+    "name": "Henk van Barneveld",
+    "email": "h.vanbarne@gmail.com"
+  }
+}

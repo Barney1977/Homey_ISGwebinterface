@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Pump_stateII",
+    "nl": "pomp inbedrijf II"
+  },
+  "desc": {
+    "en": "Numeric value for pump state.",
+    "nl": "Numerieke waarde voor pompstatus."
+  },
+  "insights": true,
+  "insightsTitleTrue": {    
+    "en": "circulation Pump turned on",
+    "nl": "Circulatie pomp geactiveerd"
+  },
+  "insightsTitleFalse": {
+    "en": "Pump turned off",
+    "nl": "Pomp gedeactiveerd"
+  },
+  "chartType": "stepLine",
+  "getable": true,
+  "setable": false,
+  "uiComponent": null
+  
+}

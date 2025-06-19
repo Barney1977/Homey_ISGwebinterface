@@ -1,0 +1,24 @@
+{
+    "type": "boolean",
+    "title": {
+      "en": "Pump_state",
+      "nl": "pomp inbedrijf"
+    },
+    "desc": {
+      "en": "True when pump active.",
+      "nl": "Wordt geactiveerd als pomp actief."
+    },
+    "insights": true,
+    "insightsTitleTrue": {
+      "en": "Pump turned on",
+      "nl": "pomp geactiveerd"
+    },
+    "insightsTitleFalse": {
+      "en": "Pump turned off",
+      "nl": "Pomp gedeactiveerd"
+    },
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+    
+  }

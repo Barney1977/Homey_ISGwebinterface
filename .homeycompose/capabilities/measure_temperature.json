@@ -1,0 +1,26 @@
+{
+    "type": "number",
+    "title": {
+      "en": "measure_Temperature",
+      "nl": "Temperatuur"
+    },
+    "units": {
+      "en": "°C",
+      "ko": "°C",
+      "no": "°C",
+      "ru": "°C"
+    },
+    "insights": true,
+    "desc": {
+      "en": "Temperature in degrees Celsius (°C)",
+      "nl": "Temperatuur in graden Celsius (°C)",
+      "de": "Temperatur in Grad Celsius (°C)"
+      
+    },
+    "decimals": 1,
+    "chartType": "spline",
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+    
+ }

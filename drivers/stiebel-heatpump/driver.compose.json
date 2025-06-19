@@ -1,0 +1,229 @@
+{
+  "name": {
+    "en": "Stiebel Eltron Heatpump"
+  },
+  "class": "other",
+  "connectivity": ["lan"],
+  "capabilities": [
+    "Operation_mode",
+    "target_temperature",
+    "measure_temperature",
+    "measure_temperature.inputregister.1",
+    "measure_temperature.inputregister.2",
+    "measure_temperature.inputregister.3",
+    "measure_temperature.inputregister.4",
+    "measure_temperature.inputregister.5",
+    "measure_temperature.inputregister.6",
+    "measure_temperature.inputregister.7",
+    "pump_state.inputregister.8",
+    "pump_stateII.inputregister.8",
+    "pump_state.inputregister.14",
+    "pump_stateII.inputregister.14",
+    "measure_pressure.inputregister.9",
+    "measure_pressure.inputregister.10",
+    "meter_power.inputregister.11",
+    "meter_power.inputregister.12",
+    "meter_power",
+    "measure_power.inputregister.15",
+    "measure_power.inputregister.16",
+    "measure_power"
+  ],
+  "capabilitiesOptions": {
+    "measure_temperature.inputregister.1": {
+      "title": {
+        "en": "Outside temp",
+        "nl": "Buiten temperatuur"
+      },
+      "address": 506,
+      "scale": 10
+    },
+    "measure_temperature.inputregister.2": {
+      "title": {
+        "en": "Actual room temperature",
+        "nl": "Kamer temperatuur"
+      },
+      "address": 583,
+      "scale": 10
+    },
+    "measure_temperature.inputregister.3": {
+      "title": {
+        "en": "Hot water temperature",
+        "nl": "Heet water temperatuur"
+      },
+      "address": 521,
+      "scale": 10
+    },
+    "measure_temperature.inputregister.4": {
+      "title": {
+        "en": "Actual Flow temp",
+        "nl": "WP Aanvoer temperatuur"
+      },
+      "address": 512,
+      "scale": 10
+    },
+    "measure_temperature.inputregister.5": {
+      "title": {
+        "en": "Actual retun temp",
+        "nl": "WP retour temp"
+      },
+      "address": 541,
+      "scale": 10
+    },
+    "measure_temperature.inputregister.6": {
+      "title": {
+        "en": "requested water temp",
+        "nl": "gevraagde water temp"
+      },
+      "address": 522,
+      "scale": 10
+    },
+    "measure_temperature.inputregister.7": {
+      "title": {
+        "en": "Dew point",
+        "nl": "Dauwpunt"
+      },
+      "address": 586,
+      "scale": 10
+    },
+    "pump_state.inputregister.8": {
+      "title": {
+        "en": "Circulation pump",
+        "nl": "Circulation pomp"
+      },
+      "address": 2511,
+      "scale": 1
+    },
+    "pump_stateII.inputregister.8": {
+      "title": {
+        "en": "Circulation pump",
+        "nl": "Circulation pomp"
+      },
+      "address": 2511,
+      "scale": 1
+    },
+    "measure_pressure.inputregister.9": {
+      "title": {
+        "en": "Low pressure",
+        "nl": "Lage druk"
+      },
+      "address": 544,
+      "scale": 100
+    },
+    "measure_pressure.inputregister.10": {
+      "title": {
+        "en": "High pressure",
+        "nl": "Hoge druk"
+      },
+      "address": 546,
+      "scale": 100
+    },
+    "meter_power.inputregister.11": {
+      "title": {
+        "en": "powerconsumption heating water",
+        "nl": "Energiegebruik warm water"
+      },
+      "address": 3514,
+      "scale": 1
+    },
+    "meter_power.inputregister.12": {
+      "title": {
+        "en": "powerconsumption heating",
+        "nl": "Energiegebruik verwarmen"
+      },
+      "address": 3511,
+      "scale": 1
+    },
+    "meter_power": {
+      "title": {
+        "en": "Total Powerconsumption",
+        "nl": "Totaal Energiegebruik"
+      },
+      "scale": 1
+    },
+    "measure_power.inputregister.15": {
+      "title": {
+        "en": "powerconsumption heating water today",
+        "nl": "Energiegebruik warm water vandaag"
+      },
+      "address": 3513,
+      "scale": 0.001
+    },
+    "measure_power.inputregister.16": {
+      "title": {
+        "en": "powerconsumption heating today",
+        "nl": "Energiegebruik verwarmen vandaag"
+      },
+      "address": 3510,
+      "scale": 0.001
+    },
+    "measure_power": {
+      "title": {
+        "en": "Powerconsumption today",
+        "nl": "Totaal Energiegebruik vandaag"
+      },
+      "scale": 1
+    },
+    "pump_state.inputregister.14": {
+      "title": {
+        "en": "source pump",
+        "nl": "bron pomp"
+      },
+      "address": 2514,
+      "scale": 1
+    },
+    "pump_stateII.inputregister.14": {
+      "title": {
+        "en": "source pump",
+        "nl": "bron pomp"
+      },
+      "address": 2514,
+      "scale": 1
+    }
+  },
+  "images": {
+    "small": "/drivers/stiebel-heatpump/assets/small.png",
+    "large": "/drivers/stiebel-heatpump/assets/large.png",
+    "xlarge": "/drivers/stiebel-heatpump/assets/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "device",
+      "navigation": {
+        "next": "list_devices"
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "prev": "device",
+        "next": "add_devices"
+      },
+      "options": {
+        "singular": true
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "ui": {
+    "components": [
+      {
+        "id": "thermostat",
+        "capabilities": [
+          "measure_temperature",
+          "target_temperature"
+        ],
+        "type": "thermostat",
+        "options": {
+          "temperature": {
+            "measure_temperature": "measure_temperature",
+            "target_temperature": "target_temperature"
+          }
+        }
+      }
+    ]
+  }
+}

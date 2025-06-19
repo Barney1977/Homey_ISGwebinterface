@@ -1,0 +1,263 @@
+{
+ "type": "enum",
+ "title": { 
+  "en": "Operation_mode"
+},
+  "getable": true,
+  "setable": true,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "1",
+      "title": {
+        "en": "Standby",
+        "nl": "Standbywerking"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "Programmode",
+        "nl": "Programmawerking"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "Comfortmode",
+        "nl": "Comfortwerking"
+      }
+    },
+    {
+      "id": "4",
+      "title": {
+        "en": "Economic",
+        "nl": "ECO modus"
+      }
+    },
+    {
+      "id": "5",
+      "title": {
+        "en": "Heating water",
+        "nl": "warmwaterbedrijf"
+      }
+    },
+    {
+      "id": "0",
+      "title": {
+        "en": "Emergency",
+        "nl": "Noodbedrijf"
+      }
+    }
+  ],
+"$flow": {
+    "triggers": [
+      {
+        "id": "thermostat_mode_changed",
+        "title": {
+          "en": "Thermostat mode changed",
+          "nl": "Thermostaatmodus is veranderd",
+          "de": "Thermostat-Modus hat sich geändert",
+          "fr": "Le mode du thermostat a changé",
+          "it": "La modalità del termostato è cambiata",
+          "sv": "Termostatläge ändrades",
+          "no": "Termostatmodus ble endret",
+          "es": "El modo del termostato ha cambiado",
+          "da": "Termostattilstand er blevet ændret",
+          "ru": "Режим термостата изменен",
+          "pl": "Zmiana trybu termostatu",
+          "ko": "온도조절기 모드 변경됨"
+        },
+        "args": [
+          {
+            "name": "thermostat_mode",
+            "type": "dropdown",
+              "values": [
+                {
+                  "id": "1",
+                  "title": {
+                    "en": "Standby",
+                    "nl": "Standbywerking"
+                  }
+                },
+                {
+                  "id": "2",
+                  "title": {
+                    "en": "Programmode",
+                    "nl": "Programmawerking"
+                  }
+                },
+                {
+                  "id": "3",
+                  "title": {
+                    "en": "Comfortmode",
+                    "nl": "Comfortwerking"
+                  }
+                },
+                {
+                  "id": "4",
+                  "title": {
+                    "en": "Economic",
+                    "nl": "ECO modus"
+                  }
+                },
+                {
+                  "id": "5",
+                  "title": {
+                    "en": "Heating water",
+                    "nl": "warmwaterbedrijf"
+                  }
+                },
+                {
+                  "id": "0",
+                  "title": {
+                    "en": "Emergency",
+                    "nl": "Noodbedrijf"
+                  }
+                }
+            ],
+            "meta": {
+              "$values": true
+            }
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "Operation_mode_is",
+        "title": {
+          "en": "Thermostat mode !{{is|is not}}",
+          "nl": "Thermostaatmodus !{{is|is niet}}",
+          "de": "Thermostat-Modus !{{ist|ist nicht}}",
+          "fr": "Mode thermostat !{{est|n'est pas}}",
+          "it": "La modalità del termostato !{{è|non è}}",
+          "sv": "Termostatläge !{{är|är inte}}",
+          "no": "Termostatmodus !{{er|er ikke}}",
+          "es": "El modo del termostato !{{está|no está}}",
+          "da": "Termostattilstand !{{er|er ikke}}",
+          "ru": "Режим термостата !{{|не}}",
+          "pl": "Tryb termostatu !{{to|to nie}}",
+          "ko": "온도조절기 모드가 다음으로 설정!{{됨|되지 않음}}"
+        },
+        "args": [
+          {
+            "name": "Operation_mode",
+            "type": "dropdown",
+            "values": [
+                {
+                  "id": "1",
+                  "title": {
+                    "en": "Standby",
+                    "nl": "Standbywerking"
+                  }
+                },
+                {
+                  "id": "2",
+                  "title": {
+                    "en": "Programmode",
+                    "nl": "Programmawerking"
+                  }
+                },
+                {
+                  "id": "3",
+                  "title": {
+                    "en": "Comfortmode",
+                    "nl": "Comfortwerking"
+                  }
+                },
+                {
+                  "id": "4",
+                  "title": {
+                    "en": "Economic",
+                    "nl": "ECO modus"
+                  }
+                },
+                {
+                  "id": "5",
+                  "title": {
+                    "en": "Heating water",
+                    "nl": "warmwaterbedrijf"
+                  }
+                },
+                {
+                  "id": "0",
+                  "title": {
+                    "en": "Emergency",
+                    "nl": "Noodbedrijf"
+                  }
+              }
+            ],
+            "meta": {
+              "$values": true
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "Operation_mode_set",
+        "title": {
+          "en": "Set the mode",
+          "nl": "Stel de modus in",
+          "de": "Modus setzen"
+          
+        },
+        "args": [
+          {
+            "name": "Operation_mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "title": {
+                  "en": "Standby",
+                  "nl": "Standbywerking"
+                }
+              },
+              {
+                "id": "2",
+                "title": {
+                  "en": "Programmode",
+                  "nl": "Programmawerking"
+                }
+              },
+              {
+                "id": "3",
+                "title": {
+                  "en": "Comfortmode",
+                  "nl": "Comfortwerking"
+                }
+              },
+              {
+                "id": "4",
+                "title": {
+                  "en": "Economic",
+                  "nl": "ECO modus"
+                }
+              },
+              {
+                "id": "5",
+                "title": {
+                  "en": "Heating water",
+                  "nl": "warmwaterbedrijf"
+                }
+              },
+              {
+                "id": "0",
+                "title": {
+                  "en": "Emergency",
+                  "nl": "Noodbedrijf"
+                }
+              }
+            ],
+            "meta": {
+              "$values": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

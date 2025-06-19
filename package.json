@@ -1,0 +1,11 @@
+{
+  "name": "Stiebel.heatpump",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "jsmodbus": "^4.0.6"
+  }
+}
