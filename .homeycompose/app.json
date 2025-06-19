@@ -1,8 +1,9 @@
 {
   "id": "Stiebel.heatpump",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
+  "brandColor": "#00FF00",
   "platforms": [
     "local"
   ],
