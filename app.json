@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "Stiebel.heatpump",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#00FF00",
@@ -52,11 +52,11 @@
       {
         "id": "is_target_temperature",
         "title": {
-          "en": "Target temperature !{{is|isn't}}",
-          "nl": "Doeltemperatuur !{{is|is niet}}"
+          "en": "Target temperature",
+          "nl": "Doeltemperatuur"
         },
         "titleFormatted": {
-          "en": "Target temperature !{{is|isniet}} [[target_temperature]]",
+          "en": "Target temperature !{{is|isn't}} [[target_temperature]]",
           "nl": "Doeltemperatuur !{{is|is niet}} [[target_temperature]]"
         },
         "args": [
@@ -78,8 +78,8 @@
       {
         "id": "is_measure_temperature",
         "title": {
-          "en": "Measured temperature !{{is|isn't}}",
-          "nl": "Gemeten temperatuur !{{is|is niet}}"
+          "en": "Measured temperature",
+          "nl": "Gemeten temperatuur"
         },
         "titleFormatted": {
           "en": "Measured temperature !{{is|isn't}} [[measure_temperature]]",
@@ -104,8 +104,8 @@
       {
         "id": "is_Outside_temp",
         "title": {
-          "en": "Outside temp !{{is|isn't}}",
-          "nl": "Buiten temperatuur !{{is|is niet}}"
+          "en": "Outside temp",
+          "nl": "Buiten temperatuur"
         },
         "titleFormatted": {
           "en": "Outside temp !{{is|isn't}} [[measure_temperature.inputregister.1]]",
@@ -130,8 +130,8 @@
       {
         "id": "is_Actual_room_temperature",
         "title": {
-          "en": "Actual room temperature !{{is|isn't}}",
-          "nl": "Kamer temperatuur !{{is|is niet}}"
+          "en": "Actual room temperature",
+          "nl": "Kamer temperatuur"
         },
         "titleFormatted": {
           "en": "Actual room temperature !{{is|isn't}} [[measure_temperature.inputregister.2]]",
@@ -156,8 +156,8 @@
       {
         "id": "is_Hot_water_temperature",
         "title": {
-          "en": "Hot water temperature !{{is|isn't}}",
-          "nl": "Heet water temperatuur !{{is|is niet}}"
+          "en": "Hot water temperature",
+          "nl": "Heet water temperatuur"
         },
         "titleFormatted": {
           "en": "Hot water temperature !{{is|isn't}} [[measure_temperature.inputregister.3]]",
@@ -182,8 +182,8 @@
       {
         "id": "is_Actual_Flow_temp",
         "title": {
-          "en": "Actual Flow temp !{{is|isn't}}",
-          "nl": "WP Aanvoer temperatuur !{{is|is niet}}"
+          "en": "Actual Flow temp",
+          "nl": "WP Aanvoer temperatuur"
         },
         "titleFormatted": {
           "en": "Actual Flow temp !{{is|isn't}} [[measure_temperature.inputregister.4]]",
@@ -208,8 +208,8 @@
       {
         "id": "is_Actual_retun_temp",
         "title": {
-          "en": "Actual retun temp !{{is|isn't}}",
-          "nl": "WP retour temp !{{is|is niet}}"
+          "en": "Actual retun temp",
+          "nl": "WP retour temp"
         },
         "titleFormatted": {
           "en": "Actual retun temp !{{is|isn't}} [[measure_temperature.inputregister.5]]",
@@ -234,8 +234,8 @@
       {
         "id": "is_requested_water_temp",
         "title": {
-          "en": "Requested water temp !{{is|isn't}}",
-          "nl": "Gevraagde water temp !{{is|is niet}"
+          "en": "Requested water temp",
+          "nl": "Gevraagde water temp"
         },
         "titleFormatted": {
           "en": "Requested water temp !{{is|isn't}} [[measure_temperature.inputregister.6]]",
@@ -260,12 +260,12 @@
       {
         "id": "is_Dew_point",
         "title": {
-          "en": "Dew point !{{is|isn't}",
-          "nl": "Dauwpunt !{{is|is niet}"
+          "en": "Dew point",
+          "nl": "Dauwpunt"
         },
         "titleFormatted": {
-          "en": "Dew point !{{is|isn't} [[measure_temperature.inputregister.7]]",
-          "nl": "Dauwpunt !{{is|is niet} [[measure_temperature.inputregister.7]]"
+          "en": "Dew point !{{is|isn't}} [[measure_temperature.inputregister.7]]",
+          "nl": "Dauwpunt !{{is|is niet}} [[measure_temperature.inputregister.7]]"
         },
         "args": [
           {
@@ -286,12 +286,12 @@
       {
         "id": "is_pump_state",
         "title": {
-          "en": "Pump state !{{is|isn't}",
-          "nl": "Pomptoestand !{{is|is niet}"
+          "en": "Pump state",
+          "nl": "Pomptoestand"
         },
         "titleFormatted": {
-          "en": "Pump state !{{is|isn't} [[pump_state.inputregister.8]]",
-          "nl": "Pomptoestand !{{is|is niet} [[pump_state.inputregister.8]]"
+          "en": "Pump state !{{is|isn't}} [[pump_state.inputregister.8]]",
+          "nl": "Pomptoestand !{{is|is niet}} [[pump_state.inputregister.8]]"
         },
         "args": [
           {
@@ -312,12 +312,12 @@
       {
         "id": "is_bron_pump",
         "title": {
-          "en": "Source pump !{{is|isn't}",
-          "nl": "Bron pomp !{{is|is niet}"
+          "en": "Source pump",
+          "nl": "Bron pomp"
         },
         "titleFormatted": {
-          "en": "Source pump !{{is|isn't} [[pump_state.inputregister.14]]",
-          "nl": "Bron pomp !{{is|is niet} [[pump_state.inputregister.14]]"
+          "en": "Source pump !{{is|isn't}} [[pump_state.inputregister.14]]",
+          "nl": "Bron pomp !{{is|is niet}} [[pump_state.inputregister.14]]"
         },
         "args": [
           {
@@ -338,12 +338,12 @@
       {
         "id": "is_measure_pressure",
         "title": {
-          "en": "Measured low pressure !{{is|isn't}",
-          "nl": "Gemeten lage druk !{{is|is niet}"
+          "en": "Measured low pressure",
+          "nl": "Gemeten lage druk"
         },
         "titleFormatted": {
-          "en": "Measured low pressure !{{is|isn't} [[measure_pressure.inputregister.9]]",
-          "nl": "Gemeten lage druk !{{is|is niet} [[measure_pressure.inputregister.9]]"
+          "en": "Measured low pressure !{{is|isn't}} [[measure_pressure.inputregister.9]]",
+          "nl": "Gemeten lage druk !{{is|is niet}} [[measure_pressure.inputregister.9]]"
         },
         "args": [
           {
@@ -364,12 +364,12 @@
       {
         "id": "is_measure_pressureII",
         "title": {
-          "en": "Measured high pressure !{{is|isn't}",
-          "nl": "Gemeten hoge druk !{{is|is niet}"
+          "en": "Measured high pressure",
+          "nl": "Gemeten hoge druk"
         },
         "titleFormatted": {
-          "en": "Measured high pressure !{{is|isn't} [[measure_pressure.inputregister.10]]",
-          "nl": "Gemeten hoge druk !{{is|is niet} [[measure_pressure.inputregister.10]]"
+          "en": "Measured high pressure !{{is|isn't}} [[measure_pressure.inputregister.10]]",
+          "nl": "Gemeten hoge druk !{{is|is niet}} [[measure_pressure.inputregister.10]]"
         },
         "args": [
           {
@@ -390,12 +390,12 @@
       {
         "id": "is_powerconsumption_heating_water",
         "title": {
-          "en": "Powerconsumption heating water !{{is|isn't}",
-          "nl": "Energiegebruik warm water !{{is|is niet}"
+          "en": "Powerconsumption heating water",
+          "nl": "Energiegebruik warm water"
         },
         "titleFormatted": {
-          "en": "Powerconsumption heating water !{{is|isn't} [[meter_power.inputregister.11]]",
-          "nl": "Energiegebruik warm water !{{is|is niet} [[meter_power.inputregister.11]]"
+          "en": "Powerconsumption heating water !{{is|isn't}} [[meter_power.inputregister.11]]",
+          "nl": "Energiegebruik warm water !{{is|is niet}} [[meter_power.inputregister.11]]"
         },
         "args": [
           {
@@ -416,12 +416,12 @@
       {
         "id": "is_powerconsumption_heating",
         "title": {
-          "en": "Powerconsumption heating !{{is|isn't}",
-          "nl": "Energiegebruik verwarmen !{{is|is niet}"
+          "en": "Powerconsumption heating",
+          "nl": "Energiegebruik verwarmen"
         },
         "titleFormatted": {
-          "en": "Powerconsumption heating !{{is|isn't} [[meter_power.inputregister.12]]",
-          "nl": "Energiegebruik verwarmen !{{is|is niet} [[meter_power.inputregister.12]]"
+          "en": "Powerconsumption heating !{{is|isn't}} [[meter_power.inputregister.12]]",
+          "nl": "Energiegebruik verwarmen !{{is|is niet}} [[meter_power.inputregister.12]]"
         },
         "args": [
           {
@@ -442,12 +442,12 @@
       {
         "id": "is_Powerconsumption_today",
         "title": {
-          "en": "Powerconsumption today !{{is|isn't}",
-          "nl": "Totaal Energiegebruik !{{is|is niet}"
+          "en": "Powerconsumption today",
+          "nl": "Totaal Energiegebruik"
         },
         "titleFormatted": {
-          "en": "Powerconsumption today !{{is|isn't} [[meter_power.dailyuse]]",
-          "nl": "Totaal Energiegebruik !{{is|is niet} [[meter_power.dailyuse]]"
+          "en": "Powerconsumption today !{{is|isn't}} [[meter_power.dailyuse]]",
+          "nl": "Totaal Energiegebruik !{{is|is niet}} [[meter_power.dailyuse]]"
         },
         "args": [
           {
